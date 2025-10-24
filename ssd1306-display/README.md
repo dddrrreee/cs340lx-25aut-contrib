@@ -43,17 +43,19 @@ The SSD1306 has 4 pins that connect to the Pi.
 <img src="images/BCM_arm_peripherals_alternative_function_assignments.png" width="800" />
 </p>
 
+The `code` folder includes `ssd1306-display-driver-staff.o` and 2 simple programs `0-fill-screen.c` and `1-draw-commands.c` you can use to test your wiring setup and make sure your device hardware doesn't have any issues.
+
 ----------------------------------------------------------------------
 ### Step 1: I2C setup
 The `code` folder includes the staff's I2C implementation `i2c.o`.
-To drop in your own I2C driver, add it to `COMMON_SRC` and 
-remove `PREBUILT_OBJS` from the Makefile.
+To drop in your own I2C driver, add it to `COMMON_SRC` and remove the `PREBUILT_OBJS` from the Makefile.
 
 ```
 COMMON_SRC := ssd1306-display-driver.c
 COMMON_SRC += my-i2c.c
 
 # PREBUILT_OBJS := i2c.o
+# PREBUILT_OBJS += ssd1306-display-driver-staff.o
 ```
 
 ----------------------------------------------------------------------
