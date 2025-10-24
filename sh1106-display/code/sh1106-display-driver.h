@@ -21,16 +21,24 @@ extern const unsigned char standard_ascii_font[];
   } while (0)
 #endif
 
-// Enum for color values
+enum {
+  SH1106_DISPLAY_ADDRESS = 0x3C,
+
+  SH1106_DISPLAY_WIDTH = 132,
+  SH1106_VISIBLE_WIDTH = 128,
+  SH1106_BUFFER_WIDTH = 133,
+
+  SH1106_DISPLAY_HEIGHT = 64,
+
+  SH1106_I2C_BUFFER_SIZE =
+      SH1106_BUFFER_WIDTH * ((SH1106_DISPLAY_HEIGHT + 7) / 8),
+};
+
 typedef enum {
   COLOR_WHITE,
   COLOR_BLACK,
   COLOR_INVERT,
 } color_t;
-
-enum {
-  SH1106_DISPLAY_ADDRESS = 0x3C,
-};
 
 // Initialize the display. Requirement: I2C should have been initialized
 // beforehand

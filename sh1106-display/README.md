@@ -18,6 +18,8 @@ The SH1106 has 4 pins that connect to the Pi. This is the same as the SSD1306.
   3. Connect `SCK` to `GPIO3`.
   4. Connect `SDA` to `GPIO2`.
 
+The `code` folder includes `sh1106-display-driver-staff.o` and 2 simple programs `0-fill-screen.c` and `1-draw-commands.c` you can use to test your wiring setup and make sure your device hardware doesn't have any issues.
+
 ----------------------------------------------------------------------
 ### Step 1: I2C setup
 The `code` folder includes the staff's I2C implementation `i2c.o`.
@@ -29,6 +31,7 @@ COMMON_SRC := sh1106-display-driver.c
 COMMON_SRC += my-i2c.c
 
 # PREBUILT_OBJS := i2c.o
+# PREBUILT_OBJS += sh1106-display-driver-staff.o
 ```
 
 The device address is still `0x3C`.
