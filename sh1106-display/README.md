@@ -2,7 +2,12 @@
 <img src="images/sh1106_amazon.jpg" width="400" />
 </p>
 
+
+
 ## SH1106 OLED Display
+
+NOTE: 
+  - the singleton, rectanglular box OLEDs we have are the sh1106's.
 
 The SH1106 is a 1.3 inch OLED display that has 128 x 64 visible pixels, but 132 x 64 bits of SRAM. It is very similar to the SSD1306 display, with 2 major differences:
 
