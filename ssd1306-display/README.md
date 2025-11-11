@@ -4,6 +4,9 @@
 
 ## SSD1306 OLED Display
 
+NOTE:
+  - the rounded corner singleton OLEDS we have are ssd1306's.
+
 The SSD1306 is a 0.96 inch OLED display that has 128 x 64 pixels.
 
 The overall idea for doing graphics with this display:
